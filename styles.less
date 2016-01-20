@@ -1,0 +1,314 @@
+/* Configs */
+
+@main-color: #3c3c3c;
+@active-color: #fff;
+
+/* Base */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+.clearfix:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.container {
+	padding: 7.5% 26% 7.5% 26%;
+	text-align: center;
+}
+
+@media (max-width:800px) and (min-width:451px){
+	.container {
+		padding: 7.5% 15% 7.5% 15%;
+	}
+}
+
+@media (max-width:450px){
+	.container {
+		padding: 7.5% 10% 7.5% 10%;
+	}
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Layout */
+
+.banner{
+	background: url(images/main.jpg);
+	height: 100vh;
+	width: 100%;
+	background-position: center top;
+	background-size: cover;
+	text-align: center;
+	color: @active-color;
+
+	h1{
+		font-size: 3.375em;
+		text-transform: uppercase;
+	}
+
+	p{
+		font-size: 0.938em;
+		text-transform: uppercase;
+		line-height: 1.5;
+		margin: 0 15%;
+	}
+}
+
+@media (max-width:800px) and (min-width:451px){
+	.banner{
+		
+		h1{
+			font-size: 1.8em;
+		}
+	}
+}
+
+@media (max-width:450px){
+	.banner{
+		height: 60vh;
+
+		h1{
+			font-size: 1em;
+		}
+
+		p{
+			font-size: .6em;
+		}
+	}
+}
+
+.symbol{ 
+	padding-top: 11%; 
+}
+
+@media (max-width:450px){
+	.symbol{ 
+		padding-top: 5%; 
+	}
+}
+
+.elipse{
+	padding-top: 5%;
+}
+
+.about-us, .we-do, .contacts{
+	span {
+		background-color: @active-color;
+	}
+}
+
+.about-us, .we-do{
+	border: 2px solid @main-color;
+	
+	h1{
+
+		font-size: 2.125em;
+		margin-top: -4%;
+	}
+
+	h2{
+		text-transform: uppercase;
+		margin-top: 5%;
+	}
+
+	p{
+		font-size: 0.875em;
+		line-height: 1.5;
+		margin: 5% 15%;
+	}
+
+	img{
+		margin-top: 10%;
+	}
+}
+
+@media (max-width:450px){
+	.about-us, .we-do{
+		h1{
+			font-size: 1.8em;
+		}
+	}
+}
+
+.services-banner{
+	background: url(images/services.jpg);
+	height: 60vh;
+	width: 100%;
+	background-position: center top;
+	background-size: cover;
+}
+
+.services{
+	border-right: 2px solid @active-color;
+	border-left: 2px solid @active-color;
+	border-bottom: 2px solid @active-color;
+	position: relative;
+	color: @active-color;
+	
+	h1{
+		margin-top: -4%;
+		font-size: 2.125em;
+	}
+
+	p{
+		font-size: 0.875em;
+		line-height: 1.5;
+		margin: 0 15% 5% 15%;
+		padding-top: 7%;
+	}
+}
+
+@media (max-width:450px){
+	.services{
+		h1{
+			font-size: 1.8em;
+		}
+
+		p{
+			font-size: .7em;
+		}
+	}
+}
+
+.cover-block{
+	position: absolute;
+	width: 45%;
+	top: -5%;
+	left: 27%;
+}
+
+.left-line, .right-line {
+	position: absolute;
+	width: 28%;
+	height: 2px;
+	background-color: @active-color;
+}
+
+.right-line {
+	left: 72%;
+}
+
+.gallery img{
+	height: 200px;
+}
+
+@media (max-width:450px){
+	.gallery img{
+		height: 100px;
+	}
+}
+
+.narrow-img, .wide-img {
+	position: relative;
+	float: left;
+	
+	img{
+		width: 100%;
+	}
+
+	h1{
+		color: @active-color;
+		text-transform: uppercase;
+		position: absolute;
+		left: 5%;
+		bottom: 5%;
+		font-size: 2.125em;
+	}
+
+	&:hover{
+		opacity:0.5;
+	}
+}
+
+.narrow-img:not(:nth-child(3n+3)){
+	padding-right: .5%;
+}
+
+.narrow-img{
+	width: 30%;
+	margin-bottom: .2%;
+}
+
+.wide-img:not(:nth-child(3n+3)){
+	padding-right: .5%;
+}
+
+.wide-img{
+	width: 40%;
+	margin-bottom: .2%;
+}
+
+@media (max-width:800px) and (min-width:451px){
+	.narrow-img, .wide-img{
+		left: 15%;
+		width: 35%;
+	}
+}
+
+@media (max-width:450px){
+	.narrow-img, .wide-img{
+		left: 10%;
+		width: 80%;
+
+		h1{
+			font-size: 1.5em;
+		}
+	}
+}
+
+.contacts{
+	border: 2px solid @main-color;
+	
+	h1{
+		margin-top: -3%;
+		font-size: 1.875em;
+	}
+
+	p{
+		font-weight: 300;
+		line-height: 1.5;
+		margin: 5% 15%;
+	}
+
+	.button{
+		border: 1 px solid @main-color;
+		background: @main-color;
+		color: @active-color;
+		text-transform: uppercase;
+		width: 40%;
+		padding: 2% 0 2% 0;
+		margin: 0 auto 5%;
+	}
+}
+
+@media (max-width:450px){
+	.contacts{
+		.button{
+			width: 50%;
+		}
+	}
+}
+
+footer{
+	text-align: center;
+	padding-bottom: 5%;
+
+	p{
+		font-size: 0.875em;
+	}
+
+	img{
+		vertical-align: middle;
+		margin-right: 2%;
+	}
+}
